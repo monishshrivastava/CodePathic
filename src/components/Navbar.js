@@ -16,7 +16,6 @@ const Navbar = () => {
     { path: '/services', label: 'Services', ariaLabel: 'Navigate to Services page' },
     { path: '/projects', label: 'Projects', ariaLabel: 'Navigate to Projects page' },
     { path: '/research', label: 'Research', ariaLabel: 'Navigate to Research page' },
-    { path: '/career', label: 'Career', ariaLabel: 'Navigate to Career page' },
     { path: '/contact', label: 'Contact', ariaLabel: 'Navigate to Contact page' }
   ], []);
 
