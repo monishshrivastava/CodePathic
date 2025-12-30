@@ -54,6 +54,7 @@
   justify-content: space-between;
   padding: var(--section-padding);
   min-height: 80vh;
+  min-height: 80dvh;
   position: relative;
   gap: 4rem;
 }
@@ -64,7 +65,7 @@
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 900;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
@@ -79,8 +80,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: var(--primary-color); /* Fallback */
+  color: var(--primary-color);
   position: relative;
+  display: inline-block;
 }
 
 .gradient-text::after {
@@ -96,7 +98,7 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: var(--text-secondary);
   line-height: 1.6;
   max-width: 600px;
@@ -113,6 +115,7 @@
   opacity: 0;
   animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 0.4s;
+  flex-wrap: wrap;
 }
 
 .hero-stat {
@@ -120,17 +123,18 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-width: 100px;
 }
 
 .hero-stat .stat-number {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 0.25rem;
 }
 
 .hero-stat .stat-label {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
   color: var(--text-muted);
   white-space: nowrap;
 }
@@ -142,11 +146,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 300px;
 }
 
 .dna-helix {
-  width: clamp(250px, 30vw, 350px);
-  height: clamp(300px, 40vw, 450px);
+  width: clamp(200px, 30vw, 350px);
+  height: clamp(250px, 40vw, 450px);
   position: relative;
   animation: rotate 15s linear infinite;
   filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.3));
@@ -211,7 +216,7 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -252,13 +257,13 @@
 }
 
 .stat-icon {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
   display: block;
 }
 
 .stat-number {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
@@ -266,11 +271,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: block;
 }
 
 .stat-label {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 500;
 }
 
@@ -302,11 +308,12 @@
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 1rem;
   position: relative;
+  line-height: 1.2;
 }
 
 .section-title::after {
@@ -322,10 +329,11 @@
 }
 
 .section-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .tabs-container {
@@ -349,11 +357,12 @@
   color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-normal);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  white-space: nowrap;
 }
 
 .tab-button::before {
@@ -384,7 +393,7 @@
 .tab-content {
   background: var(--bg-card);
   border-radius: var(--border-radius-md);
-  padding: 3rem;
+  padding: clamp(2rem, 4vw, 3rem);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(15px);
   position: relative;
@@ -412,7 +421,7 @@
 }
 
 .tab-panel h3 {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
@@ -420,12 +429,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.3;
 }
 
 .tab-panel p {
   color: var(--text-secondary);
   line-height: 1.7;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   margin-bottom: 2rem;
 }
 
@@ -454,8 +464,13 @@
 }
 
 .point-icon {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   flex-shrink: 0;
+}
+
+.point span:last-child {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--text-secondary);
 }
 
 /* Vision Timeline */
@@ -481,15 +496,17 @@
 }
 
 .timeline-year {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 800;
   color: var(--primary-color);
   min-width: 80px;
+  flex-shrink: 0;
 }
 
 .timeline-content {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.5;
 }
 
 /* Approach Steps */
@@ -536,7 +553,7 @@
 }
 
 .step-number {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 900;
   color: var(--primary-color);
   background: var(--primary-gradient);
@@ -548,7 +565,7 @@
 }
 
 .step-content h4 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -558,6 +575,7 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 /* Enhanced Values Section */
@@ -582,7 +600,7 @@
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -641,14 +659,14 @@
 }
 
 .value-icon {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
   display: block;
   filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
 }
 
 .value-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -661,7 +679,7 @@
 .value-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .value-glow {
@@ -689,7 +707,7 @@
 
 .founders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -699,7 +717,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
-  padding: 3rem 2.5rem;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
   text-align: center;
   transition: all var(--transition-normal);
   position: relative;
@@ -737,22 +755,27 @@
   color: #000;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+  z-index: 3;
 }
 
 .crown-icon {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.badge-text {
+  white-space: nowrap;
 }
 
 .member-avatar {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: clamp(100px, 20vw, 120px);
+  height: clamp(100px, 20vw, 120px);
   margin: 2rem auto 1.5rem;
 }
 
@@ -764,7 +787,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: bold;
   color: var(--text-primary);
   position: relative;
@@ -788,25 +811,25 @@
 
 .experience-badge {
   position: absolute;
-  bottom: -10px; /* or wherever you want it */
-  right: 10px;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 4px 8px;
+  bottom: -5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--primary-color);
+  font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
   border-radius: 8px;
   z-index: 10;
-  opacity: 1; /* ensure it's visible */
+  border: 1px solid var(--primary-color);
+  white-space: nowrap;
 }
-
 
 .member-info {
   margin-top: 1.5rem;
 }
 
 .member-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -814,24 +837,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.3;
 }
 
 .member-role {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
 .member-specialization {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   color: var(--secondary-color);
   margin-bottom: 1.5rem;
   font-style: italic;
 }
 
 .member-bio {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: 2rem;
@@ -843,7 +867,7 @@
 
 .achievements-title,
 .skills-title {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -861,12 +885,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   color: var(--text-secondary);
   padding: 0.5rem;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 8px;
   border: 1px solid rgba(0, 255, 136, 0.2);
+  text-align: left;
 }
 
 .skills-container {
@@ -877,7 +902,7 @@
 }
 
 .skill-tag {
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1.6vw, 0.85rem);
   padding: 0.6rem 1rem;
   border-radius: 20px;
   background: rgba(0, 255, 136, 0.1);
@@ -885,6 +910,7 @@
   color: var(--primary-color);
   transition: all var(--transition-normal);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .skill-tag:hover {
@@ -919,22 +945,25 @@
   background: var(--bg-card);
   border-radius: var(--border-radius-md);
   border: 1px solid var(--border-color);
+  flex-wrap: wrap;
 }
 
 .team-stat {
   text-align: center;
+  min-width: 120px;
 }
 
 .team-stat .stat-number {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 900;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .team-stat .stat-label {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
 }
 
 /* Partnership Section */
@@ -962,7 +991,7 @@
 }
 
 .connection-line {
-  width: 200px;
+  width: clamp(150px, 30vw, 200px);
   height: 3px;
   background: var(--primary-gradient);
   position: relative;
@@ -979,14 +1008,14 @@
 }
 
 .founder-node {
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 12vw, 80px);
+  height: clamp(60px, 12vw, 80px);
   border-radius: 50%;
   background: var(--primary-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: bold;
   color: #000;
   position: relative;
@@ -1002,9 +1031,20 @@
   animation: node-pulse 2s ease-in-out infinite;
 }
 
+.partnership-details h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .strength-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -1027,13 +1067,13 @@
 }
 
 .strength-icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   flex-shrink: 0;
   margin-top: 0.2rem;
 }
 
 .strength-content h4 {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -1042,7 +1082,7 @@
 .strength-content p {
   color: var(--text-secondary);
   line-height: 1.5;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   margin: 0;
 }
 
@@ -1089,22 +1129,23 @@
 }
 
 .milestone-marker {
-  width: 60px;
-  height: 60px;
+  width: clamp(50px, 10vw, 60px);
+  height: clamp(50px, 10vw, 60px);
   border-radius: 50%;
   background: var(--primary-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   position: relative;
   z-index: 2;
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  flex-shrink: 0;
 }
 
 .milestone-content {
   flex: 1;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   background: var(--bg-card);
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--border-color);
@@ -1119,7 +1160,7 @@
 }
 
 .milestone-content h4 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -1129,10 +1170,11 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .milestone-year {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
   color: var(--primary-color);
   font-weight: 600;
   background: rgba(0, 255, 136, 0.1);
@@ -1190,7 +1232,7 @@
 }
 
 .cta-title {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
@@ -1198,10 +1240,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.2;
 }
 
 .cta-description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -1229,6 +1272,8 @@
   color: var(--text-secondary);
   font-weight: 500;
   transition: all var(--transition-normal);
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  white-space: nowrap;
 }
 
 .cta-highlight:hover {
@@ -1238,7 +1283,7 @@
 }
 
 .highlight-icon {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .cta-buttons {
@@ -1250,9 +1295,9 @@
 }
 
 .cta-button {
-  padding: 1rem 2.5rem;
+  padding: clamp(0.9rem, 2vw, 1rem) clamp(2rem, 4vw, 2.5rem);
   border-radius: 30px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: 600;
   text-decoration: none;
   transition: all var(--transition-normal);
@@ -1263,6 +1308,7 @@
   gap: 0.5rem;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .cta-button.primary {
@@ -1303,7 +1349,7 @@
 }
 
 .button-icon {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .cta-trust-indicators {
@@ -1318,11 +1364,12 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
 }
 
 .trust-icon {
   color: var(--primary-color);
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Enhanced Animations */
@@ -1415,28 +1462,168 @@
   }
 }
 
-/* Enhanced Responsive Design */
-@media (max-width: 1024px) {
-  .about-hero {
-    gap: 3rem;
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktops (1920px and above) */
+@media (min-width: 1920px) {
+  .about-hero,
+  .stats-section,
+  .story-section,
+  .values-section,
+  .team-section,
+  .partnership-section,
+  .journey-section,
+  .cta-section {
+    padding-left: 8%;
+    padding-right: 8%;
   }
-  
-  .partnership-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+
+  .values-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .strength-grid {
-    grid-template-columns: 1fr;
+
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
   }
 }
 
-@media (max-width: 768px) {
+/* Desktop (1200px - 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .about-hero {
+    gap: 3rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-hero {
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 500px;
+  }
+
+  .dna-helix {
+    width: 280px;
+    height: 350px;
+  }
+
+  .partnership-content {
+    gap: 3rem;
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Landscape (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --section-padding: clamp(3rem, 6vw, 4rem) 4%;
+  }
+
+  .about-container {
+    padding-top: 90px;
+  }
+
   .about-hero {
     flex-direction: column;
     text-align: center;
-    gap: 3rem;
+    gap: 2.5rem;
     min-height: 70vh;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .dna-helix {
+    width: 250px;
+    height: 300px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .tab-buttons {
+    gap: 0.8rem;
+  }
+
+  .tab-button {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .partnership-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .partnership-visual {
+    height: 250px;
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-stats {
+    gap: 2rem;
+  }
+
+  .milestone {
+    gap: 1.5rem;
+  }
+
+  .cta-highlights {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet Portrait (601px - 767px) */
+@media (min-width: 601px) and (max-width: 767px) {
+  :root {
+    --section-padding: clamp(2.5rem, 5vw, 3.5rem) 4%;
+  }
+
+  .about-container {
+    padding-top: 85px;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-stats {
@@ -1444,18 +1631,63 @@
     gap: 1.5rem;
   }
 
+  .dna-helix {
+    width: 220px;
+    height: 280px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  .stat-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
   .tab-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 0.8rem;
   }
 
-  .tab-content {
-    padding: 2rem;
+  .tab-button {
+    width: 100%;
+    padding: 1rem;
   }
 
-  .values-grid,
+  .tab-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 2rem 1.8rem;
+  }
+
   .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .partnership-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .partnership-visual {
+    height: 200px;
+  }
+
+  .strength-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1467,6 +1699,7 @@
   .milestone {
     flex-direction: column !important;
     text-align: center;
+    gap: 1rem;
   }
 
   .milestone:nth-child(even) {
@@ -1479,34 +1712,102 @@
 
   .cta-highlights {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .cta-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .cta-trust-indicators {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .cta-button {
+    width: 100%;
+    justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Landscape (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
   :root {
-    --section-padding: 3rem 4%;
+    --section-padding: clamp(2rem, 4vw, 3rem) 4%;
+  }
+
+  .about-container {
+    padding-top: 80px;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    min-height: auto;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .dna-helix {
+    width: 200px;
+    height: 250px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .stat-card {
+    padding: 1.8rem 1.3rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .tab-button {
+    width: 100%;
+    padding: 0.9rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .founder-card {
     padding: 2rem 1.5rem;
   }
 
+  .partnership-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+  }
+
   .step {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    padding: 1.5rem;
   }
 
   .timeline-item {
@@ -1515,8 +1816,80 @@
     gap: 1rem;
   }
 
-  .approach-steps {
+  .milestone {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .timeline-track {
+    display: none;
+  }
+
+  .cta-highlights,
+  .cta-buttons,
+  .cta-trust-indicators {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: clamp(2rem, 4vw, 2.5rem) 4%;
+  }
+
+  .about-container {
+    padding-top: 80px;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
     gap: 1.5rem;
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-stat {
+    min-width: auto;
+  }
+
+  .dna-helix {
+    width: 180px;
+    height: 220px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .tab-button {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem 1rem;
   }
 
   .mission-points {
@@ -1527,6 +1900,296 @@
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    padding: 0.9rem;
+  }
+
+  .approach-steps {
+    gap: 1.2rem;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1.3rem 1rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .timeline-year {
+    min-width: auto;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .value-card {
+    padding: 1.8rem 1.3rem;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .founder-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .founder-badge {
+    top: -8px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-stats {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  .partnership-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .partnership-visual {
+    height: 180px;
+  }
+
+  .connection-line {
+    width: 120px;
+  }
+
+  .founder-node {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .strength-item {
+    padding: 1.2rem;
+  }
+
+  .milestone {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .milestone:nth-child(even) {
+    flex-direction: column !important;
+  }
+
+  .timeline-track {
+    display: none;
+  }
+
+  .milestone-content {
+    padding: 1.3rem;
+  }
+
+  .cta-highlights {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cta-highlight {
+    padding: 0.7rem 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.8rem;
+  }
+
+  .cta-trust-indicators {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* Extra Small Devices (Below 375px) */
+@media (max-width: 374px) {
+  :root {
+    --section-padding: 2rem 3%;
+  }
+
+  .about-container {
+    padding-top: 75px;
+  }
+
+  .dna-helix {
+    width: 160px;
+    height: 200px;
+  }
+
+  .stat-card,
+  .value-card,
+  .founder-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .tab-content {
+    padding: 1.3rem 0.8rem;
+  }
+
+  .step,
+  .timeline-item,
+  .milestone-content {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .strength-item {
+    padding: 1rem;
+  }
+
+  .founder-badge {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* iPhone SE and similar (320px width) */
+@media (max-width: 320px) {
+  :root {
+    --section-padding: 1.8rem 2.5%;
+  }
+
+  .about-container {
+    padding-top: 70px;
+  }
+
+  .dna-helix {
+    width: 140px;
+    height: 180px;
+  }
+
+  .hero-stats {
+    gap: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 1.3rem 0.8rem;
+  }
+
+  .tab-button {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .value-card,
+  .founder-card {
+    padding: 1.3rem 0.9rem;
+  }
+
+  .member-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .about-hero {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .dna-helix {
+    width: 150px;
+    height: 180px;
+  }
+
+  .hero-visual {
+    min-height: 200px;
+  }
+}
+
+/* Very short screens in landscape */
+@media (max-height: 450px) and (orientation: landscape) {
+  .about-hero {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+/* iPad Pro Portrait */
+@media (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+/* iPad Pro Landscape */
+@media (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) {
+  .values-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1541,8 +2204,19 @@
   .dna-helix,
   .helix-strand,
   .particle,
-  .cta-particle {
-    animation: none;
+  .cta-particle,
+  .avatar-glow,
+  .connection-line {
+    animation: none !important;
+  }
+
+  .stat-card:hover,
+  .value-card:hover,
+  .founder-card:hover,
+  .step:hover,
+  .point:hover,
+  .timeline-item:hover {
+    transform: none !important;
   }
 }
 
@@ -1556,8 +2230,15 @@
   .tab-button,
   .value-card,
   .founder-card,
-  .stat-card {
+  .stat-card,
+  .step,
+  .timeline-item {
     border-width: 2px;
+  }
+
+  .gradient-text {
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
   }
 }
 
@@ -1570,12 +2251,53 @@
   
   .hero-visual,
   .cta-particles,
-  .dna-helix {
-    display: none;
+  .dna-helix,
+  .partnership-visual,
+  .helix-particles {
+    display: none !important;
   }
   
   .section-title,
-  .hero-title {
-    color: black;
+  .hero-title,
+  .member-name,
+  .value-title {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+
+  .about-hero {
+    flex-direction: column;
+  }
+
+  .stat-card:hover,
+  .value-card:hover,
+  .founder-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Safe area adjustments for notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .about-container {
+    padding-top: calc(100px + env(safe-area-inset-top));
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .stat-card,
+  .value-card,
+  .founder-card,
+  .tab-button,
+  .cta-button,
+  .skill-tag {
+    -webkit-tap-highlight-color: rgba(0, 255, 136, 0.2);
+  }
+
+  .stat-card:active,
+  .value-card:active,
+  .founder-card:active {
+    transform: scale(0.98);
   }
 }
