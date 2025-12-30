@@ -69,26 +69,26 @@ const About = () => {
     }
   ], []);
 
-  const team = useMemo(() => [
-    {
-      name: 'Monish Shrivastava',
-      role: 'Founder & CEO',
-      bio: 'Visionary leader with 2+ years of experience in ML, data science, and full-stack development. Passionate about creating AI solutions that solve real-world problems and drive business transformation.',
-      skills: ['Machine Learning', 'Data Science', 'Web Development', 'App Development', 'Python', 'React'],
-      isFounder: true,
-      experience: '2+ Years',
-      specialization: 'AI/ML & Full-Stack Development',
-      achievements: ['50+ Projects Delivered', 'AI Innovation Leader', 'Full-Stack Expert']
-    },
+const team = useMemo(() => [
     {
       name: 'Shiv Narayan',
-      role: 'Co-Founder & Chief Data Scientist',
-      bio: 'Experienced data scientist and ML engineer with 4+ years of expertise in machine learning and data science. Specializes in building scalable AI models and data-driven solutions.',
+      role: 'Founder & CEO',
+      bio: 'Visionary leader with 4+ years of expertise in machine learning and data science. Passionate about creating AI solutions that solve real-world problems and drive business transformation through advanced ML models.',
       skills: ['Machine Learning', 'Data Science', 'Deep Learning', 'Python', 'TensorFlow', 'Statistical Analysis'],
       isFounder: true,
       experience: '4+ Years',
       specialization: 'ML Engineering & Data Science',
       achievements: ['Advanced ML Models', 'Data Science Expert', 'Research Publications']
+    },
+    {
+      name: 'Monish Shrivastava',
+      role: 'Co-Founder & Chief Technology Officer',
+      bio: 'Experienced technology leader with 2+ years of experience in ML, data science, and full-stack development. Specializes in building scalable AI solutions and driving technological innovation.',
+      skills: ['Machine Learning', 'Data Science', 'Web Development', 'App Development', 'Python', 'React'],
+      isFounder: true,
+      experience: '2+ Years',
+      specialization: 'AI/ML & Full-Stack Development',
+      achievements: ['50+ Projects Delivered', 'AI Innovation Leader', 'Full-Stack Expert']
     }
   ], []);
 
@@ -437,40 +437,40 @@ const About = () => {
           </div>
 
           <div className="partnership-details">
-            <div className="partnership-strength">
-              <h3>Our Complementary Strengths</h3>
-              <div className="strength-grid">
-                <div className="strength-item">
-                  <div className="strength-icon">🚀</div>
-                  <div className="strength-content">
-                    <h4>Innovation & Leadership</h4>
-                    <p>Monish brings visionary leadership and full-stack development expertise</p>
-                  </div>
+          <div className="partnership-strength">
+            <h3>Our Complementary Strengths</h3>
+            <div className="strength-grid">
+              <div className="strength-item">
+                <div className="strength-icon">🔬</div>
+                <div className="strength-content">
+                  <h4>Deep Technical Expertise</h4>
+                  <p>Shiv provides visionary leadership and advanced ML engineering capabilities</p>
                 </div>
-                <div className="strength-item">
-                  <div className="strength-icon">🔬</div>
-                  <div className="strength-content">
-                    <h4>Deep Technical Expertise</h4>
-                    <p>Shiv provides advanced ML engineering and data science capabilities</p>
-                  </div>
+              </div>
+              <div className="strength-item">
+                <div className="strength-icon">🚀</div>
+                <div className="strength-content">
+                  <h4>Innovation & Development</h4>
+                  <p>Monish brings full-stack development expertise and technical innovation</p>
                 </div>
-                <div className="strength-item">
-                  <div className="strength-icon">⚡</div>
-                  <div className="strength-content">
-                    <h4>Rapid Execution</h4>
-                    <p>Together, we deliver cutting-edge AI solutions with speed and precision</p>
-                  </div>
+              </div>
+              <div className="strength-item">
+                <div className="strength-icon">⚡</div>
+                <div className="strength-content">
+                  <h4>Rapid Execution</h4>
+                  <p>Together, we deliver cutting-edge AI solutions with speed and precision</p>
                 </div>
-                <div className="strength-item">
-                  <div className="strength-icon">🎯</div>
-                  <div className="strength-content">
-                    <h4>Client-Focused Approach</h4>
-                    <p>Our combined experience ensures solutions that truly meet business needs</p>
-                  </div>
+              </div>
+              <div className="strength-item">
+                <div className="strength-icon">🎯</div>
+                <div className="strength-content">
+                  <h4>Client-Focused Approach</h4>
+                  <p>Our combined experience ensures solutions that truly meet business needs</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
