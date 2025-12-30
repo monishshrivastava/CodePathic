@@ -195,14 +195,6 @@ const Navbar = () => {
             >
               <span>CODEPATHIC</span>
             </Link>
-            <button 
-              className="mobile-close-btn"
-              onClick={closeMobileMenu}
-              aria-label="Close mobile menu"
-              type="button"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
           </div>
           
           <nav className="mobile-nav" role="navigation" aria-label="Mobile navigation">
