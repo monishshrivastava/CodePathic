@@ -2,97 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    
-    <!-- Updated Favicon References -->
-    <link rel="icon" href="%PUBLIC_URL%/logo.svg" type="image/svg+xml" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.svg" sizes="any" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.svg" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#00ff88" />
+    <meta name="theme-color" content="#FFB547" />
     
-    <meta
-      name="description"
-      content="CODEPATHIC - Leading AI/ML development company providing cutting-edge artificial intelligence, machine learning, web development, and data science solutions."
-    />
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/logo.jpeg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpeg" />
     
-    <!-- Additional SEO Meta Tags -->
-    <meta name="keywords" content="AI development, machine learning, data science, web development, artificial intelligence, ML solutions, CODEPATHIC, tech consulting" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CODEPATHIC - Leading AI/ML development company specializing in artificial intelligence, machine learning, web development, and data science solutions. Transform your ideas into intelligent solutions." />
+    <meta name="keywords" content="AI development, machine learning, ML solutions, web development, app development, data science, CODEPATHIC, artificial intelligence services" />
     <meta name="author" content="CODEPATHIC" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.codepathic.com" />
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="CODEPATHIC - AI/ML Development & Data Science Solutions" />
-    <meta property="og:description" content="Leading AI/ML development company providing cutting-edge artificial intelligence, machine learning, and data science solutions." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://codepathic.com" />
-    <meta property="og:image" content="%PUBLIC_URL%/logo.svg" />
+    <meta property="og:url" content="https://www.codepathic.com/" />
+    <meta property="og:title" content="CODEPATHIC - AI/ML Development & Data Science Solutions" />
+    <meta property="og:description" content="Transforming ideas into intelligent solutions through cutting-edge AI, machine learning, and full-stack development." />
+    <meta property="og:image" content="https://www.codepathic.com/og-image.jpg" />
     <meta property="og:site_name" content="CODEPATHIC" />
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CODEPATHIC - AI/ML Development Solutions" />
-    <meta name="twitter:description" content="Leading AI/ML development company providing cutting-edge solutions." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/logo.svg" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.codepathic.com/" />
+    <meta property="twitter:title" content="CODEPATHIC - AI/ML Development & Data Science Solutions" />
+    <meta property="twitter:description" content="Transforming ideas into intelligent solutions through cutting-edge AI, machine learning, and full-stack development." />
+    <meta property="twitter:image" content="https://www.codepathic.com/twitter-image.jpg" />
     
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    
-    <title>CODEPATHIC - AI/ML Development & Data Science Solutions</title>
-    
-    <!-- Structured Data -->
+    <!-- Structured Data (JSON-LD) for Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "CODEPATHIC",
-      "description": "Leading AI/ML development company providing cutting-edge artificial intelligence, machine learning, and data science solutions.",
-      "url": "https://codepathic.com",
-      "logo": "%PUBLIC_URL%/logo.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-84629-83010",
-        "contactType": "customer service",
-        "email": "codepathic1@gmail.com"
+      "url": "https://www.codepathic.com",
+      "logo": "https://www.codepathic.com/logo512.png",
+      "description": "Leading AI/ML development company specializing in artificial intelligence, machine learning, web development, and data science solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Your Country"
       },
       "sameAs": [
-        "https://linkedin.com/company/codepathic",
-        "https://github.com/codepathic"
+        "https://www.instagram.com/codepathic/",
+        "https://github.com/codepathic",
+        "https://linkedin.com/company/codepathic"
       ],
-      "foundingDate": "2022",
-      "founders": [
-        {
-          "@type": "Person",
-          "name": "Monish Shrivastava"
-        },
-        {
-          "@type": "Person",
-          "name": "Shiv Naramyan"
-        }
-      ],
-      "areaServed": "Worldwide",
-      "serviceType": [
-        "AI Development",
-        "Machine Learning",
-        "Data Science",
-        "Web Development",
-        "Mobile App Development"
-      ]
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "contact@codepathic.com"
+      }
     }
     </script>
+    
+    <!-- Structured Data for Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CODEPATHIC",
+      "url": "https://www.codepathic.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.codepathic.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data for Professional Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "CODEPATHIC",
+      "image": "https://www.codepathic.com/logo512.png",
+      "url": "https://www.codepathic.com",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Your Country"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "YOUR_LATITUDE",
+        "longitude": "YOUR_LONGITUDE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+    
+    <title>CODEPATHIC - AI/ML Development & Data Science Solutions | Leading AI Company</title>
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <noscript>
-      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-        <h1>CODEPATHIC</h1>
-        <p>You need to enable JavaScript to run this app.</p>
-        <p>Please enable JavaScript in your browser and refresh the page.</p>
-      </div>
-    </noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>
