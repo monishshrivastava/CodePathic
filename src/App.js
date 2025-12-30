@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Import components
@@ -14,37 +15,39 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        {/* Animated Background */}
-        <div className="animated-bg">
-          <div className="neural-network">
-            {[...Array(50)].map((_, i) => (
-              <div key={i} className="node" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`
-              }}></div>
-            ))}
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          {/* Animated Background */}
+          <div className="animated-bg">
+            <div className="neural-network">
+              {[...Array(50)].map((_, i) => (
+                <div key={i} className="node" style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`
+                }}></div>
+              ))}
+            </div>
           </div>
+
+          <Navbar />
+          
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+
+          <Footer />
         </div>
-
-        <Navbar />
-        
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </HelmetProvider>
   );
 }
 
